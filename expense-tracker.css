@@ -86,13 +86,6 @@
 
 .display{
     list-style: none;
-    width: 300px;
-    height: 300px;
-    border-radius: 5px;
-    border: 1px solid black;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
 }
 
 #income{
@@ -103,12 +96,7 @@
     background-color: lightcoral;
 }
 
-.display-total{
-    margin-top: auto;
-    margin-left:auto;
-}
-
-ul li{
+.item{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,4 +104,27 @@ ul li{
     width: 100%;
     padding: 5px;
     border-bottom: 1px solid #373737;
+}
+
+.delete{
+    background-color: gray;
+    position: absolute;
+    right: 0;
+}
+
+.list-container{
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.display-total{
+    font-size: large;
+    text-align:end; 
+    padding: 20px;
 }

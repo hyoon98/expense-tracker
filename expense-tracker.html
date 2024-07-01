@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="balance">
-            Balance: $<span id="balance">0.00</span>
+            Balance: $<span id="balance">0</span>
         </div>
         <div class="input-container">
             <select name="type" id="type">
@@ -18,21 +18,22 @@
             </select>
             <input type="text" name="description" id="description" placeholder="Add Description"></input>
             <input type="number" name="amount" id="amount" placeholder="Add Amount"></input>
-            <button id="add">Add</button>
+            <button id="add" onclick="addTransaction()">Add</button>
         </div>
         <div class="displays-container">
             <div class="display-container">
                 <div class="display-name">Income</div>
-                <ul class="display" id="income">
-                    <li class="display-total" id="income">Total:</li>
-                </ul>
+                <div class="list-container" id="income">
+                    <ul class="display" id="income-list"></ul>
+                    <div class="display-total">Total: $<span id="income-total">0</span></div>
+                </div>
             </div>
             <div class="display-container">
                 <div class="display-name">Expense</div>
-                <ul class="display" id="expense">
-                    <li>Test</li>
-                    <li class="display-total" id="expense-total">Total:</li>
-                </ul>
+                <div class="list-container" id="expense">
+                    <ul class="display" id="expense-list"></ul>
+                    <div class="display-total">Total: $<span id="expense-total">0</span></div>
+                </div>
             </div>
         </div>
     </div>
